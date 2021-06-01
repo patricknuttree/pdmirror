@@ -10,7 +10,7 @@
 
 ## 2. Hosting on Heroku
 
-## 3. Department and Location Search.
+## 3. Department and/or Location Search.
 - Users can search for a Police department by name and or by location.
 - Upon finding this Police Department they can be directed to the departments page.
 
