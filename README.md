@@ -1,99 +1,97 @@
-# Flask React Project
+# Welcome to PDMirror!
+![ Logo]()
 
-This is the backend for the Flask React project.
+### PDMirror is a yelp inspired app that is designed to help communities and police departments have real and meaningful communication through a medium that removes some of the power dynamics that create limitations in the communications. The name and the purpose of the app all come from the same sociological theory of the sociological mirror. A person cannot determine the normalcy or deviancy of their actions through their own perspective alone. They must use the world as their mirror to determine where their action lands and from there grow.
 
-## Getting started
+---
+### Index
 
-1. Clone this repository (only this branch)
+[Technologies](#Technologies)
 
-   ```bash
-   git clone https://github.com/appacademy-starters/python-project-starter.git
-   ```
+[Key Features](#Key-Features)
 
-2. Install dependencies
+[Visit PDMirror]()
 
-      ```bash
-      pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
-      ```
+[Database Schema](wiki/wiki_images/schema1.png)
 
-3. Create a **.env** file based on the example with proper settings for your
-   development environment
-4. Setup your PostgreSQL user, password and database and make sure it matches your **.env** file
+[Frontend Routes]()
 
-5. Get into your pipenv, migrate your database, seed your database, and run your flask app
+[API Routes]()
 
-   ```bash
-   pipenv shell
-   ```
+[Details]()
 
-   ```bash
-   flask db upgrade
-   ```
+[Feature Spotlight]()
 
-   ```bash
-   flask seed all
-   ```
+[Code Snippets]()
 
-   ```bash
-   flask run
-   ```
+[PDMirror Future Roadmap]()
 
-6. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
+[Technical Instructions for Project]()
 
-***
-*IMPORTANT!*
-   If you add any python dependencies to your pipfiles, you'll need to regenerate your requirements.txt before deployment.
-   You can do this by running:
+[Pre-Project Planning]()
 
-   ```bash
-   pipenv lock -r > requirements.txt
-   ```
+[Developers]()
 
-*ALSO IMPORTANT!*
-   psycopg2-binary MUST remain a dev dependency because you can't install it on apline-linux.
-   There is a layer in the Dockerfile that will install psycopg2 (not binary) for us.
-***
+[Special Thanks]()
 
-## Deploy to Heroku
+---
+### Technologies
 
-1. Create a new project on Heroku
-2. Under Resources click "Find more add-ons" and add the add on called "Heroku Postgres"
-3. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
-4. Run
+* Python
+* Flask
+* JavaScript
+* React-Redux
+* JSX
+* CSS
+* SQLAlchemy
+* PostgreSQL
+* Heroku
+* VSCode
+* Docker
+* npm
+* Figma
+* Adobe Photoshop
+* Adobe XD
+* DrawSql
+* notion
 
-   ```bash
-   heroku login
-   ```
+### Key Features
+ 
 
-5. Login to the heroku container registry
+### Details
 
-   ```bash
-   heroku container:login
-   ```
 
-6. Update the `REACT_APP_BASE_URL` variable in the Dockerfile.
-   This should be the full URL of your Heroku app: i.e. "https://flask-react-aa.herokuapp.com"
-7. Push your docker container to heroku from the root directory of your project.
-   This will build the dockerfile and push the image to your heroku container registry
+### Visit PDMirror
 
-   ```bash
-   heroku container:push web -a {NAME_OF_HEROKU_APP}
-   ```
 
-8. Release your docker container to heroku
+### Feature Spotlight
 
-   ```bash
-   heroku container:release web -a {NAME_OF_HEROKU_APP}
-   ```
 
-9. set up your database:
+### Code Snippets
 
-   ```bash
-   heroku run -a {NAME_OF_HEROKU_APP} flask db upgrade
-   heroku run -a {NAME_OF_HEROKU_APP} flask seed all
-   ```
 
-10. Under Settings find "Config Vars" and add any additional/secret .env variables.
+### PDMirror Future Roadmap
 
-11. profit
-# pdmirror
+
+### Technical Instructions for Project
+* Git Clone
+* On local machine, run 'pipenv install' to install required dependencies.
+* Create initial database user and database as stated in .env.example file.
+* Enter your pip environment.
+* In terminal flask run to start backend.
+* In a separate terminal cd into the react app file. 
+* Run npm start to start the front end server. 
+* This should start new page in your browser. localhost:port in browser.
+
+### Pre-Project Planning
+* Picked and researched a clone and decided on general theme to distinguish
+* Created model schema for database relations with DrawSQL
+* Created a basic wire-frame using Figma.
+* Looked for sites to supply data for product information.
+* Developed a working protocol to track the course of project with notion 
+
+
+### Developer
+* Patrick Nusbaum [Github](https://github.com/patricknuttree) [Linkedin](https://www.linkedin.com/in/patrick-nusbaum-mpa) 
+
+### Special Thanks
