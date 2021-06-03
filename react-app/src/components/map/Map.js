@@ -8,7 +8,7 @@ require('dotenv').config();
 const Map = () => {
 // API KEY
 const { REACT_APP_GOOGLE_MAPS_API_KEY } = process.env
-console.log(process.env.REACT_APP_GOOGLE_MAPS_API_KEY)
+console.log("THIS IS THE DUMB THING THAT WONT WORK", process.env.REACT_APP_GOOGLE_MAPS_API_KEY)
 //MAP SIZE
 const mapStyles = {
     height: "500px",
