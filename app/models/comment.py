@@ -1,3 +1,4 @@
+from sqlalchemy.orm import backref
 from .db import db
 
 
@@ -7,9 +8,9 @@ class Comment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     comment = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
-    user = db.relationship("User", back_populates="comments")
-    reflection_id = db.Column(db.Integer, db.ForeignKey("reflections.id"), nullable=False)
-    post = db.relationship("Reflection", back_populates="comments")
+    reflection_id = db.Column(db.Integer, db.ForeignKey("reflections.id"),
+                              nullable=False)
+    reflection = db.relationship("Reflection", backref="comments")
 
     def to_dict(self):
         return {

@@ -1,4 +1,4 @@
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import backref, relationship
 from .db import db
 
 
@@ -9,10 +9,8 @@ class Reflection(db.Model):
     post = db.Column(db.Text, nullable=False)
     rating = db.Column(db.Integer, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
-    user = db.relationship("User", back_populates="reflections")
     pd_id = db.Column(db.Integer, db.ForeignKey("pds.id"), nullable=False)
-    pd = db.relationship("Pd", back_populates="reflection")
-    comment = db.relationship("Comment", back_populates="reflection")
+    pd = db.relationship("Pd", backref="reflection")
 
     def to_dict(self):
         return {

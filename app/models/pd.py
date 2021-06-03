@@ -1,4 +1,4 @@
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import backref, relationship
 from .db import db
 
 
@@ -7,8 +7,7 @@ class Pd(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     department_name = db.Column(db.String(100), nullable=False)
-    jurisdictions = db.relationship("Jurisdiction", back_populates="pd")
-    reflections = db.relationship("Reflection", back_populates="pd")
+    jurisdictions = db.relationship("Jurisdiction", backref="pd")
 
     def to_dict(self):
         return {
