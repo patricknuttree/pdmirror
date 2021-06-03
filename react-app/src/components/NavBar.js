@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import DemoUser from './auth/DemoUser';
 import LogoutButton from './auth/LogoutButton';
 
 const NavBar = () => {
@@ -25,6 +26,9 @@ const NavBar = () => {
           <NavLink to="/users" exact={true} activeClassName="active">
             Users
           </NavLink>
+        </li>
+        <li>
+          <DemoUser />
         </li>
         <li>
           <LogoutButton />
