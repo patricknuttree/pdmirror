@@ -40,6 +40,7 @@ export const signUp = async (username, email, password) => {
     body: JSON.stringify({
       username,
       email,
+      pd_rep,
       password,
     }),
   });
