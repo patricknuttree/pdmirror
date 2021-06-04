@@ -12,7 +12,6 @@ const Map = () => {
     dispatch(displayPds())
 
 // API KEY
-// const { REACT_APP_GOOGLE_MAPS_API_KEY } = process.env
 // console.log("THIS IS THE DUMB THING THAT WONT WORK", process.env.REACT_APP_GOOGLE_MAPS_API_KEY)
 //MAP SIZE
 const mapStyles = {
