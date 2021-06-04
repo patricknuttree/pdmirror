@@ -8,7 +8,7 @@ require('dotenv').config();
 const Map = () => {
 // API KEY
 const { REACT_APP_GOOGLE_MAPS_API_KEY } = process.env
-console.log("THIS IS THE DUMB THING THAT WONT WORK", process.env.REACT_APP_GOOGLE_MAPS_API_KEY)
+// console.log("THIS IS THE DUMB THING THAT WONT WORK", process.env.REACT_APP_GOOGLE_MAPS_API_KEY)
 //MAP SIZE
 const mapStyles = {
     height: "500px",
@@ -18,11 +18,12 @@ const mapStyles = {
 const defaultCenter = {
         lat: 41.4586535,
         lng:  -82.0156992
-  };
-// SET LOCATIONS
-const [selected, setSelected] = useState({})
-const onSelect = item => {
-    setSelected(item)
+    };
+    // SET LOCATIONS
+    const [selected, setSelected] = useState({})
+    const onSelect = item => {
+        setSelected(item)
+        {console.log(item)}
 }
 
     return (
