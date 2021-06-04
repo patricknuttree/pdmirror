@@ -73,6 +73,7 @@ export const authenticate = () => async (dispatch) => {
         password,
       }),
     });
+    console.log("FRONT END PD_REP", pd_rep)
     const data = await response.json();
     if (data.errors) {
         return data;
