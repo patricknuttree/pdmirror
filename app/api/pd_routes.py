@@ -10,5 +10,5 @@ pd_routes = Blueprint("pds", __name__)
 @pd_routes.route('/')
 def pds():
     pds = Pd.query.all()
-    return "Hello World"
-    # return {"pds": [pd.to_dict() for pd in pds]}
+    # return "Hello World"
+    return {"pds": [pd.to_dict() for pd in pds]}

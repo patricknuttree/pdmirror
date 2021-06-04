@@ -6,7 +6,7 @@ import { signUp } from '../../store/session';
 const SignUpForm = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  const [pd_rep, setPd_rep] = useState(false)
+  const [pd_rep, setPd_rep] = useState("")
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
   const user = useSelector(state => state.session.user);
@@ -65,6 +65,7 @@ const SignUpForm = () => {
       </div>
         <label>Police Department Rep.</label>
           <select value={pd_rep} onChange={updatePd_rep}>
+            <option value=""></option>
             <option value={true}>True</option>
             <option value={false}>False</option>
           </select>
