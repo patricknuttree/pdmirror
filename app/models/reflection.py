@@ -18,5 +18,5 @@ class Reflection(db.Model):
             "post": self.post,
             "rating": self.rating,
             "user_id": self.user_id,
-            "product_id": self.pd_id,
+            "pd_id": self.pd_id,
         }

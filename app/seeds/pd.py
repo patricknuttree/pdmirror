@@ -53,5 +53,5 @@ def seed_pds():
 
 
 def undo_pds():
-    db.session.execute('TRUNCATE products RESTART IDENTITY CASCADE;')
+    db.session.execute('TRUNCATE pds RESTART IDENTITY CASCADE;')
     db.session.commit()

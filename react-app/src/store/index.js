@@ -2,9 +2,10 @@ import {createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import session from "./session"
 import pd from "./pd"
+import reflectionReducer from "./reflection"
 
 const rootReducer = combineReducers({
-    session, pd,
+    session, pd, reflectionReducer
 });
 
 
