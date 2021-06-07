@@ -2,12 +2,13 @@ import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { useParams } from "react-router"
 import { displayPds } from "../../store/pd";
+import Reflection from "./Reflection";
 
 const SinglePoliceDepartment = () => {
     const { pdId } = useParams();
     const dispatch = useDispatch();
     const policeDepartments = useSelector(state => {
-        return state.pd.list.map(pdId => state.pd[pdId])
+        return state.pd.list.map(singlePdId => state.pd[singlePdId])
     })
     const singlePd = policeDepartments[pdId]
 
@@ -25,6 +26,7 @@ const SinglePoliceDepartment = () => {
             </div>
             <div>
                 <h1>This is where the reflections go</h1>
+                <Reflection pdId={pdId}/>
             </div>
         </div>
     )

@@ -16,9 +16,9 @@ def pds():
 
 
 # GET ALL THE REFLECTIONS FOR A POLICE DEPARTMENT (api/pds/:id/reflections)
-@pd_routes.route('<int:id>/reflections')
+@pd_routes.route('/<int:id>/reflections')
 def pd_reflections(id):
-    reflections = Reflection.query(Reflection.pd_id == id).join(
+    reflections = Reflection.query.filter(Reflection.pd_id == id).join(
         User, User.id == Reflection.user_id).all()
     return {
         "reflections": [reflection.to_dict() for reflection in reflections]
