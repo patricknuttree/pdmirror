@@ -9,6 +9,7 @@ import UsersList from "./components/UsersList";
 import User from "./components/User";
 import { authenticate } from "./store/session";
 import Main from "./components/main/Main";
+import SinglePoliceDepartment from "./components/singlePD/SinglePoliceDepartment"
 
 function App() {
   const user = useSelector(state => state.session.user)
@@ -44,6 +45,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true} >
           <Main />
+        </ProtectedRoute>
+        <ProtectedRoute path="/pd/:pdId" exact={true} >
+          <SinglePoliceDepartment />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>
