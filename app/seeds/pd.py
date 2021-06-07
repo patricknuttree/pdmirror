@@ -4,17 +4,16 @@ from app.models import db, Pd
 def seed_pds():
     avon_police_dep = Pd(
         department_name="Avon Police Department",
-        street_number=36145,
-        street_name="Detroit Road",
+        street_address="36145 Detroit Road",
         city="Avon",
         state="Ohio",
         zip_code=44011
+        
     )
 
     sheffield_lake_police_dep = Pd(
         department_name="Sheffield Lake Police Department",
-        street_number=44054,
-        street_name="Harris Road",
+        street_address="44054 Harris Road",
         city="Sheffield Lake",
         state="Ohio",
         zip_code=44054
@@ -22,8 +21,7 @@ def seed_pds():
 
     sheffield_village_police_dep = Pd(
         department_name="Sheffield Village Police Department",
-        street_number=4340,
-        street_name="Colorado Avenue",
+        street_address="4340 Colorado Avenue",
         city="Sheffield",
         state="Ohio",
         zip_code=44054
@@ -31,8 +29,7 @@ def seed_pds():
 
     avon_lake_police_dep = Pd(
         department_name="Avon Lake Police Department",
-        street_number=32855,
-        street_name="Walker Road",
+        street_address="32855 Walker Road",
         city="Avon Lake",
         state="Ohio",
         zip_code=44012
@@ -40,8 +37,7 @@ def seed_pds():
 
     north_ridgeville_police_dep = Pd(
         department_name="North Ridgeville Police Department",
-        street_number=7307,
-        street_name="Avon Belden Road",
+        street_address="7307 Avon Belden Road",
         city="North Ridgeville",
         state="Ohio",
         zip_code=44039

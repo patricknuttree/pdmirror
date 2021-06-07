@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api"
-import Locations from "./Locations"
+import Geocode from "react-geocode"
+// import Locations from "./Locations"
 import "./Map.css"
 import { useDispatch, useSelector } from "react-redux";
 import { displayPds } from "../../store/pd";
@@ -8,46 +9,74 @@ import { displayPds } from "../../store/pd";
 require('dotenv').config();
 
 const Map = () => {
+    Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
+    Geocode.setLanguage("en");
+
     const dispatch = useDispatch();
     dispatch(displayPds())
 
+    const policeDepartments = useSelector(state => {
+        return state.pd
+    });
+
+    console.log("STATE PDS", policeDepartments);
+
+
+    const latAndLngFinder = async(pdObj) => {
+        const response = await Geocode.fromAddress(`${pdObj.street_address}, ${pdObj.city}, ${pdObj.state}`);
+        const {lat, lng} = response.results.geometry.location;
+        pdObj.location = {}
+        pdObj.location.lat = lat
+        pdObj.location.lnt = lng
+        return pdObj
+    };
+
+    console.log("DOES THIS WORK", policeDepartments[1])
+
+    
+    // const newPds = []
+    // policeDepartments.forEach(policeDept => {
+    //     const policeDeptWithCoordinates = latAndLngFinder(policeDept)
+    //     newPds.push(policeDeptWithCoordinates)
+    // }
+
+    //     for (const policeDept in policeDepartments) {
+    //         const response = Geocode.fromAddress(`${policeDept.street_number}, ${policeDept.street_name}, ${policeDept.city}, ${policeDept.state}, ${policeDept.zip_code}`);
+    //         console.log("THIS IS THE LAT AND LONG OF THE PD", response)
+    //         const {lat, lng} = response.results.geometry.location;
+    // }
 // API KEY
+// const { REACT_APP_GOOGLE_MAPS_API_KEY } = process.env
 // console.log("THIS IS THE DUMB THING THAT WONT WORK", process.env.REACT_APP_GOOGLE_MAPS_API_KEY)
 //MAP SIZE
-const mapStyles = {
-    height: "500px",
-    width: "500px",
-}
+    const mapStyles = {
+        height: "500px",
+        width: "500px",
+    }
 //DEFAULT LOCATION
-const defaultCenter = {
-        lat: 41.4586535,
-        lng:  -82.0156992
-    };
+    const defaultCenter = {
+            lat: 41.4586535,
+            lng:  -82.0156992
+        };
     // SET LOCATIONS
     const [selected, setSelected] = useState({})
     const onSelect = item => {
         setSelected(item)
         {console.log("ITEM", item)}
-}
-
+    }
+        // return (
+        //     <h1>Just a Stand in</h1>
+        // )
     return (
         <div className="map-container">
             <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
             <GoogleMap mapContainerStyle={mapStyles} zoom={7} center={defaultCenter}>
-                    {
-                        Locations.map(item => {
-                            return (
-                                <Marker key={item.location.lat}
-                                position={item.location}
-                                onClick={() => {onSelect(item)}}
-                                />
-                            )
-                        })
-                    }
+                
                 </GoogleMap>
             </LoadScript>
         </div>
     )
 }
+
 
 export default Map
