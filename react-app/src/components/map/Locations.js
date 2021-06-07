@@ -1,40 +1,32 @@
+import { useSelector } from "react-redux"
+
+// const Locations = () => {
+//   const policeDepartments = useSelector(state => {
+//     return state.pd
+//     // .map(pdId => state.pd[pdId])
+//   })
+//   console.log("MAPPED PD'S", policeDepartments)
+//   return policeDepartments
+// }
+
+
+// THIS WORKS
 // const Locations = [
 //     {
-//         name: "Avon Police Department",
-//         location: {
-//             lat: 41.4517,
-//             lng: 82.0345,
-//         },
-//         departmentLink: "cityofavon.com/172/police"
+//       name: "Seattle",
+//       location: {
+//         lat: 41.4586535,
+//         lng:  -82.0156992,
+//       },
+//       video: "https://www.youtube.com/embed/1ObALKmvLTE" 
 //     },
 //     {
-//         name: "North Ridgeville Police Department",
-//         location: {
-//             lat: 41.3895,
-//             lng: 82.0190,
-//         },
-//         departmentLink: "nridgeville.org/police.aspx"
+//       name: "Malibu",
+//       location: {
+//         lat: 34.035591,
+//         lng:  -118.689423,
+//       },
+//       video: "https://www.youtube.com/embed/avTBYK-snOU" 
 //     },
-// ]
-
-const Locations = [
-    {
-      name: "Seattle",
-      location: {
-        lat: 41.4586535,
-        lng:  -82.0156992,
-      },
-      video: "https://www.youtube.com/embed/1ObALKmvLTE" 
-    },
-    {
-      name: "Malibu",
-      location: {
-        lat: 34.035591,
-        lng:  -118.689423,
-      },
-      video: "https://www.youtube.com/embed/avTBYK-snOU" 
-    },
-    
-    // look at adding traveling diver locations with different markers
-  ];
+//   ];
 export default Locations
