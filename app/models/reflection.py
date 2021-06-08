@@ -19,4 +19,5 @@ class Reflection(db.Model):
             "rating": self.rating,
             "user_id": self.user_id,
             "pd_id": self.pd_id,
+            "username": self.user.username
         }

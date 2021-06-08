@@ -1,3 +1,4 @@
+from app.seeds.comment import seed_comment, undo_comments
 from app.seeds.pd import seed_pds, undo_pds
 from app.seeds.reflection import seed_reflections, undo_reflections
 from flask.cli import AppGroup
@@ -16,6 +17,7 @@ def seed():
     seed_users()
     seed_pds()
     seed_reflections()
+    seed_comment()
     # Add other seed functions here
 
 
@@ -25,6 +27,7 @@ def undo():
     db.drop_all()
     undo_users()
     undo_pds()
-    undo_reflections
+    undo_reflections()
+    undo_comments()
     # undo_users()
     # Add other undo functions here
