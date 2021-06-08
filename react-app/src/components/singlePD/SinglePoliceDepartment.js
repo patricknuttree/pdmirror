@@ -10,7 +10,7 @@ const SinglePoliceDepartment = () => {
     const policeDepartments = useSelector(state => {
         return state.pd.list.map(singlePdId => state.pd[singlePdId])
     })
-    const singlePd = policeDepartments[pdId]
+    const singlePd = policeDepartments[pdId - 1]
 
     useEffect(() => {
         dispatch(displayPds())
