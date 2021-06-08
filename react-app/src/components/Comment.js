@@ -18,7 +18,7 @@ const Comment = ({ reflectionId }) => {
             <div>{reflectionComments[0]?.post}</div>
             <div>
                 {reflectionComments?.map(comment => (
-                    <div>
+                    <div key={comment.id}>
                         <div>{comment.username}</div>
                         <div>{comment.comment}</div>
                     </div>

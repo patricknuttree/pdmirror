@@ -13,7 +13,7 @@ import SinglePoliceDepartment from "./components/singlePD/SinglePoliceDepartment
 import SingleReflection from "./components/SingleReflection";
 
 function App() {
-  const user = useSelector(state => state.session.user)
+  // const user = useSelector(state => state.session.user)
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
 

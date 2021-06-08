@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { createReflection} from "../../store/reflection";
 import { displayReflections } from "../../store/reflection";
@@ -7,7 +7,6 @@ import { displayReflections } from "../../store/reflection";
 function CreateReflection() {
     const [post, setPost] = useState("");
     const [rating, setRating] = useState(1);
-    const [errors, setErrors] = useState([]);
     const dispatch = useDispatch();
 
     const { pdId } = useParams()

@@ -2,10 +2,15 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import DemoUser from './auth/DemoUser';
 import LogoutButton from './auth/LogoutButton';
+import PDMirror from "../logo/PDMirror.mp4"
 
 const NavBar = () => {
   return (
     <nav>
+      <video height="150px" autostart="true" autoPlay muted loop
+        src={PDMirror}
+        type="video/mp4"
+        />
       <ul>
         <li>
           <NavLink to="/" exact={true} activeClassName="active">
