@@ -18,6 +18,7 @@ def reflection_comments(id):
         # "Hello World Comments Are Here"
     }
 
+
 @comment_routes.route('/reflection/<int:id>/comments', methods=['POST'])
 def add_comment(id):
     form = CommentForm()
