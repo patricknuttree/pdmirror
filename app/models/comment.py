@@ -17,5 +17,7 @@ class Comment(db.Model):
             "id": self.id,
             "comment": self.comment,
             "user_id": self.user_id,
-            "reflection_id": self.reflection_id
+            "reflection_id": self.reflection_id,
+            "username": self.user.username,
+            "post": self.reflection.post
         }

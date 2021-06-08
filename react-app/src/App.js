@@ -10,7 +10,7 @@ import User from "./components/User";
 import { authenticate } from "./store/session";
 import Main from "./components/main/Main";
 import SinglePoliceDepartment from "./components/singlePD/SinglePoliceDepartment"
-import Reflection from "./components/singlePD/Reflection";
+import SingleReflection from "./components/SingleReflection";
 
 function App() {
   const user = useSelector(state => state.session.user)
@@ -49,6 +49,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/pd/:pdId" exact={true} >
           <SinglePoliceDepartment />
+        </ProtectedRoute>
+        <ProtectedRoute path="/reflection/:reflectionId" exact={true}>
+          <SingleReflection />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

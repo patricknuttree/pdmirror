@@ -3,9 +3,10 @@ import thunk from "redux-thunk";
 import session from "./session"
 import pd from "./pd"
 import reflectionReducer from "./reflection"
+import commentReducer from "./comment"
 
 const rootReducer = combineReducers({
-    session, pd, reflectionReducer
+    session, pd, reflectionReducer, commentReducer
 });
 
 

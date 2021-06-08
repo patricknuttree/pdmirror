@@ -25,7 +25,6 @@ const SinglePoliceDepartment = () => {
                 <div>{singlePd?.city}, {singlePd?.state}, {singlePd?.zip_code}</div>
             </div>
             <div>
-                <h1>This is where the reflections go</h1>
                 <Reflection pdId={pdId}/>
             </div>
         </div>
