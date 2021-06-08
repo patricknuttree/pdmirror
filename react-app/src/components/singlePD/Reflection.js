@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom"
 import { useParams } from "react-router"
 import { displayReflections } from "../../store/reflection"
 import { Comment } from "../Comment"
+import CreateReflection from "./CreateReflection"
 
 const Reflection = ({ pdId }) => {
     console.log(pdId)
@@ -12,7 +13,7 @@ const Reflection = ({ pdId }) => {
         return state.reflectionReducer.list?.map(reflectionId => state.reflectionReducer[reflectionId])
     })
 
-    console.log("THIS IS THE REFLECTION STATE", reflections)
+    // console.log("THIS IS THE REFLECTION STATE", reflections)
 
     const ratingCalculator = () => {
         if (reflections.length){
@@ -30,10 +31,13 @@ const Reflection = ({ pdId }) => {
     useEffect(() => {
         dispatch(displayReflections(pdId))
     }, [dispatch])
-    console.log("ARE REFLECTIONS CONNECTED", reflections)
+    // console.log("ARE REFLECTIONS CONNECTED", reflections)
 
     return (
         <div>
+            <div>
+                <CreateReflection />
+            </div>
             <div>
                 <h1>Department Reflection Rating: {ratingCalculator()}</h1>
                 {reflections?.map(reflect => (
