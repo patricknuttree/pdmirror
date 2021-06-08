@@ -19,7 +19,7 @@ const Main = () => {
         <div>
             <div>
                 {policeDepartments?.map(policeDept => (
-                    <NavLink to={`/pd/${policeDept.id}`}>
+                    <NavLink key={policeDept.id} to={`/pd/${policeDept.id}`}>
                         <div>
                             {policeDept.department_name}
                         </div>

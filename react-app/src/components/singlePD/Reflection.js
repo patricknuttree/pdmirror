@@ -1,9 +1,9 @@
 import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { NavLink } from "react-router-dom"
-import { useParams } from "react-router"
+// import { useParams } from "react-router"
 import { displayReflections } from "../../store/reflection"
-import { Comment } from "../Comment"
+// import { Comment } from "../Comment"
 import CreateReflection from "./CreateReflection"
 
 const Reflection = ({ pdId }) => {
@@ -41,9 +41,9 @@ const Reflection = ({ pdId }) => {
             <div>
                 <h1>Department Reflection Rating: {ratingCalculator()}</h1>
                 {reflections?.map(reflect => (
-                    <div>
+                    <div key={reflect.id}>
                         <div>{reflect.username}</div>
-                        <NavLink key={reflect.id} to={`/reflection/${reflect.id}`}>
+                        <NavLink to={`/reflection/${reflect.id}`}>
                             <div>
                                 {reflect.post}
                             </div>

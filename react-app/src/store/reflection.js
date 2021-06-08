@@ -27,7 +27,7 @@ export const displayReflections = (id) => async (dispatch) => {
 }
 
 export const createReflection = (payload) => async (dispatch) => {
-    const { post, rating, pd_id } = payload;
+    const { pd_id } = payload;
     const response = await fetch(`/api/pds/${pd_id}/reflections`, {
         method: "POST",
         headers: {
