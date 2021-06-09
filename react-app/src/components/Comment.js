@@ -11,8 +11,6 @@ const Comment = ({ reflectionId }) => {
         return state.commentReducer.list?.map(commentId => state.commentReducer[commentId])
     })
 
-    console.log(reflectionComments)
-    // console.log("REFLECTION COMMENTS", reflectionComments)
     useEffect(() => {
         dispatch(displayComments(reflectionId))
     }, [dispatch])

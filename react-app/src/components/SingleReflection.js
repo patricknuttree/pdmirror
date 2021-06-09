@@ -6,7 +6,6 @@ import Comment from "./Comment"
 const SingleReflection = () => {
     const { reflectionId } = useParams()
     const reflection = useSelector(state => state.reflectionReducer[reflectionId])
-    console.log(reflection)
 
 
     return (

@@ -14,7 +14,6 @@ const Main = () => {
     useEffect(() => {
         dispatch(displayPds())
     },[dispatch])
-    console.log("IS STATE CONNECTED", policeDepartments)
 
     return (
         <div>

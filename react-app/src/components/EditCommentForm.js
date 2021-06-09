@@ -12,7 +12,6 @@ function EditCommentForm({ comment_id, setEditable, editable }) {
     const dispatch = useDispatch();
     
     const { reflectionId } = useParams()
-    console.log("OGCOMMENT", reflectionId)
 
     const onCommentSubmit = async (e) => {
         e.preventDefault();

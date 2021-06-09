@@ -12,8 +12,6 @@ const Reflection = ({ pdId }) => {
         return state.reflectionReducer.list?.map(reflectionId => state.reflectionReducer[reflectionId])
     })
 
-    // console.log("THIS IS THE REFLECTION STATE", reflections)
-
     const ratingCalculator = () => {
         if (reflections.length){
             let ratingTotal = 0
@@ -30,7 +28,6 @@ const Reflection = ({ pdId }) => {
     useEffect(() => {
         dispatch(displayReflections(pdId))
     }, [dispatch])
-    // console.log("ARE REFLECTIONS CONNECTED", reflections)
 
     return (
         <div>

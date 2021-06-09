@@ -5,7 +5,6 @@ import { useSelector } from "react-redux"
 //     return state.pd
 //     // .map(pdId => state.pd[pdId])
 //   })
-//   console.log("MAPPED PD'S", policeDepartments)
 //   return policeDepartments
 // }
 

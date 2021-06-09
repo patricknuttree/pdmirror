@@ -60,7 +60,6 @@ export const authenticate = () => async (dispatch) => {
   
   
   export const signUp = (username, email, pd_rep, password) => async (dispatch)  => {
-    console.log("PD_REP", pd_rep)
     const response = await fetch("/api/auth/signup", {
       method: "POST",
       headers: {
@@ -73,7 +72,6 @@ export const authenticate = () => async (dispatch) => {
         password,
       }),
     });
-    console.log("FRONT END PD_REP", pd_rep)
     const data = await response.json();
     if (data.errors) {
         return data;

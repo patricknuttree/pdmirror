@@ -15,7 +15,6 @@ export const displayPds = () => async (dispatch) => {
     const response = await fetch('/api/pds/');
     if (response.ok) {
         const data = await response.json();
-        // console.log("DATA", data)
         dispatch(getPds(data))
     }
 }

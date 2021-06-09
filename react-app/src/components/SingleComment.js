@@ -5,10 +5,8 @@ import EditCommentForm from './EditCommentForm';
 
 
 function SingleComment({ comment, reflectionId }){
-    // console.log("COMMENT IN SINGLECOMMENT", comment)
     const dispatch = useDispatch()
     const [editable, setEditable] = useState(false)
-
     const user = useSelector(state => state.session.user)
 
     const editButton = (e) => {
@@ -28,7 +26,7 @@ function SingleComment({ comment, reflectionId }){
 
     return (
         <div key={comment?.id}>
-            <div>{comment?.user_name}</div>
+            <div>{comment?.username}</div>
             <div>{comment?.comment}</div>
             <div>
                 {user.id === comment?.user_id && <button id={comment?.id} onClick={editButton}>Edit</button>}
