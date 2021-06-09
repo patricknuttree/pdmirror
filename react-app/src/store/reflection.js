@@ -61,7 +61,7 @@ export default function reflectionReducer(state = initialState, action){
                 ...state,
                 ...nextState,
                 list: sortList(action.list.reflections)
-            }
+            };
         case POST_REFLECTION:
             return { ...state, ...action.payload };
         default:
