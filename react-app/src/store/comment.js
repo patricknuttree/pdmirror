@@ -1,6 +1,7 @@
 //ACTIONS
 const GET_COMMENTS = "/api/comments/GET_COMMENTS"
-const POST_COMMENT = "/api/comments/POST_COMMENTS"
+const POST_COMMENT = "/api/comments/POST_COMMENT"
+const DELETE_COMMENT = "/api/comments/DELETE_COMMENT"
 
 //ACTION CREATOR
 const getComments = (list) => {
@@ -14,6 +15,13 @@ const postComment = (payload) => {
     return {
         type: POST_COMMENT,
         payload
+    }
+}
+
+const deleteComment = (deletePayload) => {
+    return {
+        type: DELETE_COMMENT,
+        deletePayload
     }
 }
 
@@ -41,6 +49,36 @@ export const createComment = (payload) => async (dispatch) => {
     }
 }
 
+export const updateComment = (payload) => async (dispatch) => {
+    const { reflection_id, comment_id } = payload;
+    const response = await fetch(`/api/comments/reflection/${reflection_id}/comments/${comment_id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify(payload)
+    })
+    // if(response.ok){
+    //     const data = await response.json();
+    //     dispatch(postComment(data))
+    // }
+}
+
+export const deleteCommentThunk = (deletePayload) => async (dispatch) => {
+    const { reflection_id, comment_id} = deletePayload
+    const response = await fetch(`/api/comments/reflection/${reflection_id}/comments/${comment_id}`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            comment_id
+        })
+    })
+    if(response.ok){
+        dispatch(deleteComment(comment_id))
+    }
+}
+
+// CREATE STATE
 const initialState = {
     list: [],
 };
@@ -66,6 +104,11 @@ export default function commentReducer(state = initialState, action){
             };
         case POST_COMMENT:
             return { ...state, ...action.payload };
+
+        case DELETE_COMMENT:
+            const lastState = { ...state }
+            delete lastState[action.deletePayload]
+            return lastState
         default:
             return state;
     }

@@ -7,7 +7,6 @@ import { displayReflections } from "../../store/reflection"
 import CreateReflection from "./CreateReflection"
 
 const Reflection = ({ pdId }) => {
-    console.log(pdId)
     const dispatch = useDispatch();
     const reflections = useSelector(state => {
         return state.reflectionReducer.list?.map(reflectionId => state.reflectionReducer[reflectionId])
