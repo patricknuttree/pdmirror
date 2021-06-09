@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/session';
 
 const SignUpForm = () => {
+  const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [pd_rep, setPd_rep] = useState("")
@@ -15,7 +16,10 @@ const SignUpForm = () => {
   const onSignUp = async (e) => {
     e.preventDefault();
     if (password === repeatPassword) {
-      await dispatch(signUp(username, email, pd_rep, password));
+      const data = await dispatch(signUp(username, email, pd_rep, password));
+      if (data.errors) {
+        setErrors(data.errors)
+      }
     }
   };
 
@@ -46,6 +50,11 @@ const SignUpForm = () => {
   return (
     <form onSubmit={onSignUp}>
       <div>
+        <div>
+          {errors.map((error, index) => (
+            <div key={index}>{error}</div>
+            ))}
+        </div>
         <label>User Name</label>
         <input
           type="text"

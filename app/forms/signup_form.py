@@ -12,8 +12,15 @@ def user_exists(form, field):
         raise ValidationError("User is already registered.")
 
 
+def email_valid(form, field):
+    print("Validating Email Address")
+    email = field.data
+    if not email.count("@"):
+        raise ValidationError("Email is invalid")
+
+
 class SignUpForm(FlaskForm):
     username = StringField('username', validators=[DataRequired()])
-    email = StringField('email', validators=[DataRequired(), user_exists])
+    email = StringField('email', validators=[DataRequired(), Email(), user_exists, email_valid])
     pd_rep = SelectField('pd_rep', choices=["true", "false"])
     password = StringField('password', validators=[DataRequired()])
