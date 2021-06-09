@@ -19,8 +19,6 @@ const Comment = ({ reflectionId }) => {
 
     return (
         <div>
-            <h2>Reflection</h2>
-            <div>{reflectionComments[0]?.post}</div>
             <h2>Comments</h2>
             <CreateComment />
             <div>
