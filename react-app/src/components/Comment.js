@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { useParams } from "react-router"
 import { displayComments } from "../store/comment";
+import CreateComment from "./CreateComment";
 
 const Comment = ({ reflectionId }) => {
     const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const Comment = ({ reflectionId }) => {
     return (
         <div>
             <div>{reflectionComments[0]?.post}</div>
+            <CreateComment />
             <div>
                 {reflectionComments?.map(comment => (
                     <div key={comment.id}>

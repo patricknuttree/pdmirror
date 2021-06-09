@@ -1,7 +1,7 @@
 from flask import request
 from flask.blueprints import Blueprint
 from flask_login import login_required, current_user
-# from app.forms import CommentForm
+from app.forms import CommentForm
 from app.models import db, Comment, User, Reflection
 
 comment_routes = Blueprint("comments", __name__)
@@ -21,6 +21,7 @@ def reflection_comments(id):
 
 @comment_routes.route('/reflection/<int:id>/comments', methods=['POST'])
 def add_comment(id):
+    print("CURRENT USER---------------------------------------", current_user.id)
     form = CommentForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
