@@ -1,0 +1,79 @@
+.login-form-container-outer{
+    /* border: 3px solid red; */
+    height: 80vh;
+}
+
+.login-form-container-mid{
+    /* border: 3px solid green; */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-form-container-inner{
+    /* border: 3px solid blue; */
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form{
+    /* border: 3px solid yellow; */
+    height: 80%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-form-title{
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-errors{
+    /* border: 3px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: red;
+}
+
+.login-form-fields-container{
+    /* border: 3px solid orange; */
+    width: 90%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.login-form-fields{
+    /* border:3px solid orangered; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.login-form-label-containers{
+    /* border:3px solid blue; */
+}
+
+.login-form-inputs-containers{
+    /* border: 3px solid green; */
+}
+
+/* WAITING TO PICK COLOR SCHEME */
+/* .input-field{
+} */
