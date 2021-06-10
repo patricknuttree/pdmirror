@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { displayPds } from "../../store/pd";
+import AuthNavBar from "../AuthNavBar";
 import Search from "../search/Search";
 // import Map from "../map/Map"
 
@@ -17,6 +18,7 @@ const Main = () => {
 
     return (
         <div>
+            <AuthNavBar />
             <div>
                 <div>
                     <Search/>
