@@ -1,0 +1,43 @@
+.spd-container-outer{
+    /* border: 3px solid red; */
+}
+
+.spd-container-inner{
+    /* border: 3px solid blue; */
+}
+
+.spd-pd-name-container{
+    /* border: 3px solid green; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+
+.spd-pd-address-container{
+    /* border: 3px solid yellow; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.spd-address-title{
+    /* border: 3px solid purple; */
+}
+
+.spd-address-streetadd{
+    /* border: 3px solid orange; */
+    margin-left: 3px;
+}
+
+.spd-address-secondline{
+    /* border: 3px solid blue; */
+    margin-left: 3px;
+}
+
+.spd-reflection-container{
+    /* border: 3px solid green; */
+}

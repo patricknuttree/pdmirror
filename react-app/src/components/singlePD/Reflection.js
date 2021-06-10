@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom"
 import { displayReflections } from "../../store/reflection"
 // import { Comment } from "../Comment"
 import CreateReflection from "./CreateReflection"
+import "./reflection.css"
 
 const Reflection = ({ pdId }) => {
     const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const Reflection = ({ pdId }) => {
             reflections.forEach(reflectRating => {
                 ratingTotal += reflectRating.rating
             })
-            return ratingTotal / reflections.length
+            return (ratingTotal / reflections.length).toFixed(2)
         }
         else {
             return "Department has no reflection thus no rating."
@@ -30,19 +31,22 @@ const Reflection = ({ pdId }) => {
     }, [dispatch])
 
     return (
-        <div>
-            <div>
+        <div className="reflect-container-outer">
+            <div className="reflect-rating-container">
+                <h1 className="reflect-rating">Department Reflection Rating: {ratingCalculator()}</h1>
+            </div>
+            <div className="reflect-create-container">
                 <CreateReflection />
             </div>
-            <div>
-                <h1>Department Reflection Rating: {ratingCalculator()}</h1>
+            <h3>Reflections:</h3>
+            <div className="reflections-container">
                 {reflections?.map(reflect => (
-                    <div key={reflect.id}>
-                        <div>{reflect.username}</div>
-                        <NavLink to={`/reflection/${reflect.id}`}>
-                            <div>
+                    <div key={reflect.id} className="reflection-containers">
+                        <div className="reflection-username">{reflect.username}:</div>
+                        <NavLink className="reflection-links" className="reflect-link" to={`/reflection/${reflect.id}`}>
+                            <p className="reflection-links">
                                 {reflect.post}
-                            </div>
+                            </p>
                         </NavLink>
                     </div>
                 ))}
