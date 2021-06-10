@@ -10,10 +10,12 @@ const AuthNavBar = () => {
     <nav>
       <div className="auth-nav-bar-container">
         <div className="auth-nav-logo-container">
+        <NavLink to="/" exact={true} activeClassName="active" className="auth-navlink">
           <video height="150px" autostart="true" autoPlay muted loop
             src={PDMirror}
             type="video/mp4"
             />
+        </NavLink>
           </div>
         <div className="auth-nav-site-title-container">PDMIRROR</div>
         <div className="auth-nav-link-container">

@@ -2,7 +2,9 @@ import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { useParams } from "react-router"
 import { displayPds } from "../../store/pd";
+import AuthNavBar from "../AuthNavBar";
 import Reflection from "./Reflection";
+import "./singlepolicedepartment.css"
 
 const SinglePoliceDepartment = () => {
     const { pdId } = useParams();
@@ -18,14 +20,21 @@ const SinglePoliceDepartment = () => {
 
     return (
         <div>
-            <div>{singlePd?.department_name}</div>
-            <div>
-                <div>Department Address:</div>
-                <div>{singlePd?.street_address}</div>
-                <div>{singlePd?.city}, {singlePd?.state}, {singlePd?.zip_code}</div>
-            </div>
-            <div>
-                <Reflection pdId={pdId}/>
+                <AuthNavBar />
+            <div className="spd-container-outer">
+                <div className="spd-container-inner">
+                <div className="spd-pd-name-container">
+                    <div>{singlePd?.department_name}</div>
+                </div>
+                <div className="spd-pd-address-container">
+                    <div className="spd-address-title">Department Address:</div>
+                    <div className="spd-address-streetadd">{singlePd?.street_address}</div>
+                    <div className="spd-address-secondline">{singlePd?.city}, {singlePd?.state}, {singlePd?.zip_code}</div>
+                </div>
+                <div className="spd-reflection-container">
+                    <Reflection pdId={pdId}/>
+                </div>
+                </div>
             </div>
         </div>
     )
