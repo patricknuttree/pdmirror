@@ -12,9 +12,11 @@ function SingleSearchPD({ pd, setSearch }) {
     }
 
     return (
-        <div>
-            <Link to={`/pd/${pd.id}`} onClick={clearSearch}>{pd.department_name}</Link>
-        </div>
+        <Link to={`/pd/${pd.id}`} onClick={clearSearch} className="search-results-link">
+            <div className="search-results">
+                {pd.department_name}
+            </div> 
+        </Link>
     )
 }
 
