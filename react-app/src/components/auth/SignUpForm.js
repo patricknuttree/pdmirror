@@ -72,6 +72,7 @@ const SignUpForm = () => {
                   className="input-field"
                   type="text"
                   name="username"
+                  placeholder="username"
                   onChange={updateUsername}
                   value={username}
                   ></input>
@@ -86,6 +87,7 @@ const SignUpForm = () => {
                   className="input-field"
                   type="text"
                   name="email"
+                  placeholder="email"
                   onChange={updateEmail}
                   value={email}
                   ></input>
@@ -96,7 +98,7 @@ const SignUpForm = () => {
                 <label>Police Department Rep.:</label>
               </div>
               <div className="login-form-inputs-containers">
-                  <select value={pd_rep} onChange={updatePd_rep}>
+                  <select value={pd_rep} onChange={updatePd_rep} className="input-field">
                     <option value=""></option>
                     <option value={true}>True</option>
                     <option value={false}>False</option>
@@ -112,6 +114,7 @@ const SignUpForm = () => {
                   className="input-field"
                   type="password"
                   name="password"
+                  placeholder="password"
                   onChange={updatePassword}
                   value={password}
                   ></input>
@@ -126,6 +129,7 @@ const SignUpForm = () => {
                   className="input-field"
                   type="password"
                   name="repeat_password"
+                  placeholder="password"
                   onChange={updateRepeatPassword}
                   value={repeatPassword}
                   required={true}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux"
 import SingleSearchPD from "./SingleSearchPD"
+import "./search.css"
 
 function Search(){
     const [search, setSearch] = useState('')
@@ -17,18 +18,20 @@ function Search(){
     }, [search])
 
     return (
-        <div>
-            <div>
-                <input value={search} type="text" placeholder="Search for a police department..." onChange={(e) => setSearch(e.target.value)} />
+        <div className="search-container">
+            <div className="search-container-outer">
+                <div className="search-input-container-inner">
+                    <input value={search} type="text" placeholder="Search for a police department..." onChange={(e) => setSearch(e.target.value)} className="search-input"/>
+                </div>
+                {filteredPDs.length < 5 && filteredPDs.length > 0 && <div className="search-output-container">
+                    {search.length >= 1 && filteredPDs.map(pd => (
+                        <SingleSearchPD pd={pd} setSearch={setSearch} filteredPDs={filteredPDs} key={pd.id} />
+                        ))}
+                    </div>}
+                {filteredPDs.length === 0 && <div className="search-output-container">
+                    <p>Police Department reflecting</p>
+                    </div>}
             </div>
-            {filteredPDs.length < 5 && filteredPDs.length > 0 && <div>
-                {search.length >= 1 && filteredPDs.map(pd => (
-                    <SingleSearchPD pd={pd} setSearch={setSearch} filteredPDs={filteredPDs} key={pd.id} />
-                ))}
-                </div>}
-            {filteredPDs.length === 0 && <div>
-                <p>Police Department is not currently reflecting</p>
-                </div>}
         </div>
     )
 }

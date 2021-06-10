@@ -24,7 +24,10 @@
 }
 
 .signup-form{
-    /* border: 3px solid yellow; */
+    border: 1px solid rgba(17, 119, 187, .5);
+    box-shadow: 0 0 5px 1px #1177bb;
+    background-color: rgba(247, 243, 206, .35);
+    border-radius: 35px;
     height: 80%;
     width: 50%;
     display: flex;
@@ -35,6 +38,7 @@
 
 .signup-form-title{
     font-size: 30px;
+    font-weight: bold;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -47,16 +51,16 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
-    color: red;
+    color: #DC417A;
 }
 
 .signup-form-fields-container{
     /* border: 3px solid orange; */
     width: 90%;
-    height: 40%;
+    height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .signup-form-fields{
