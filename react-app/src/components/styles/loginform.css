@@ -1,3 +1,10 @@
+body{
+    background-image: url(https://images.unsplash.com/photo-1591065411478-97722a82fe81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1826&q=80);
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+}
+
 .login-form-container-outer{
     /* border: 3px solid red; */
     height: 80vh;
