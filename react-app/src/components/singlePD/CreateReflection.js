@@ -40,7 +40,7 @@ function CreateReflection() {
             <div className="creflect-container-inner">
                 <div className="creflect-title">Write a Reflection: </div>
                 <form className="creflect-form" onSubmit={onReflectionSubmit}>
-                        <div className="creflect-fields-position" className="creflect-field-style">
+                        <div id="creflect-input-and-label" className="creflect-fields-position" className="creflect-field-style">
                             <label className="creflect-labels">Reflection:</label>
                             <textarea id="post-input"
                                 name="post"

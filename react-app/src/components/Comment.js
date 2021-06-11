@@ -4,6 +4,7 @@ import { useParams } from "react-router"
 import { displayComments } from "../store/comment";
 import CreateComment from "./CreateComment";
 import SingleComment from "./SingleComment";
+import AuthNavBar from './AuthNavBar'
 import "./styles/comment.css"
 
 const Comment = ({ reflectionId }) => {
@@ -18,8 +19,9 @@ const Comment = ({ reflectionId }) => {
 
     return (
         <div className="comment-container-outer">
+            <AuthNavBar />
             <div class="comment-container-inner">
-                <h2 className="comment-title">Comments</h2>
+                <div className="comment-title">Comments</div>
                 <CreateComment />
                 <div>
                     {reflectionComments?.map((comment, index) => (

@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { createComment } from "../store/comment";
 import { displayComments } from "../store/comment"
+import "./styles/createcomment.css"
 
 function CreateComment(){
     const [comment, setComment] = useState("");
@@ -28,19 +29,21 @@ function CreateComment(){
     };
 
     return (
-        <div>
-            <div>Write a Comment</div>
-            <form onSubmit={onCommentSubmit}>
-                <div>
-                    <label>Comment</label>
-                    <textarea id="comment-input"
-                    name="comment"
-                    onChange={updateComment}
-                    value={comment}
-                    />
-                    <button type="submit">Submit Comment</button>
-                </div>
-            </form>
+        <div className="ccomment-container-outer">
+            <div className="ccomment-container-inner">
+                <div className="ccomment-title">Write a Comment</div>
+                <form className="ccomment-form" onSubmit={onCommentSubmit}>
+                    <div id="ccomment-input-and-labels" className="ccomment-fields-position" className="ccomment-field-style">
+                        <label className="ccomment-labels">Comment</label>
+                        <textarea id="comment-input"
+                        name="comment"
+                        onChange={updateComment}
+                        value={comment}
+                        />
+                        <button className="ccomment-fields-position" id="ccomment-button-style" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
