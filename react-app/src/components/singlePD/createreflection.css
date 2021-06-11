@@ -1,0 +1,107 @@
+.creflect-container-outer{
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.creflect-container-inner{
+    border: 1px solid rgba(17, 119, 187, .2);
+    box-shadow: 0px 0px 20px 1px rgba(220, 65, 122, .2);
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(247, 243, 206, .25);
+    border-radius: 25px;
+
+}
+
+.creflect-title{
+    /* border: 3px solid yellow; */
+    font-size: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* width: 30%; */
+}
+
+.creflect-form{
+    /* border: 3px solid hotpink; */
+    height: 100%;
+    /* width: 70%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.creflect-field-style{
+    /* border: 3px solid orange; */
+    /* background-color: rgba(247, 243, 206, .5); */
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.creflect-fields-position{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.creflect-labels{
+    margin-right: 10px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#post-input{
+    height: 64px;
+    width: 1000px;
+    background-color: rgba(17, 119, 187, .75);
+    color: #F7F3CE;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+#rating-input{
+    height: 64px;
+    /* width: 64px; */
+    font-size: 32px;
+    background-color: rgba(17, 119, 187, .75);
+    color: #F7F3CE;
+    border-radius: 10px;
+
+}
+
+#post-input:focus{
+    transition: ease-in-out;
+    transition-duration: 250ms;
+    background-color: rgba(17, 119, 187);
+}
+
+#rating-input:focus{
+    transition: ease-in-out;
+    transition-duration: 250ms;
+    background-color: rgba(17, 119, 187);
+}
+
+#creflect-button-style{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#creflect-button-style:hover{
+    transition: ease-in-out;
+    transition-duration: 250ms;
+    background-color: #1177BB;
+}

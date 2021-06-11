@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { createReflection} from "../../store/reflection";
 import { displayReflections } from "../../store/reflection";
+import "./createreflection.css"
 
 function CreateReflection() {
     const [post, setPost] = useState("");
@@ -35,28 +36,33 @@ function CreateReflection() {
     };
 
     return (
-        <div>
-            <div>Write a Reflection</div>
-            <form onSubmit={onReflectionSubmit}>
-                <div>
-                    <label>Reflection</label>
-                    <textarea id="post-input"
-                        name="post"
-                        onChange={updatePost}
-                        value={post}
-                        />
-                    <input id="rating-input"
-                        type="number"
-                        min="1"
-                        max="5"
-                        step="1"
-                        name="rating"
-                        onChange={updateRating}
-                        value={rating}
-                        />
-                    <button type="submit">Submit Reflection</button>
-                </div>
-            </form>
+        <div className="creflect-container-outer">
+            <div className="creflect-container-inner">
+                <div className="creflect-title">Write a Reflection: </div>
+                <form className="creflect-form" onSubmit={onReflectionSubmit}>
+                        <div className="creflect-fields-position" className="creflect-field-style">
+                            <label className="creflect-labels">Reflection:</label>
+                            <textarea id="post-input"
+                                name="post"
+                                onChange={updatePost}
+                                value={post}
+                                />
+                        </div>
+                        <div className="creflect-fields-position" className="creflect-field-style">
+                            <label className="creflect-labels">Rating:</label>
+                            <input id="rating-input"
+                                type="number"
+                                min="1"
+                                max="5"
+                                step="1"
+                                name="rating"
+                                onChange={updateRating}
+                                value={rating}
+                                />
+                        </div>
+                        <button className="creflect-fields-position" id="creflect-button-style" type="submit">Submit</button>
+                </form>
+            </div>
         </div>
     )
 
