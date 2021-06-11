@@ -19,7 +19,7 @@ def validation_errors_to_error_messages(validation_errors):
     return errorMessages
 
 
-# GET ALL THE POLICE DEPARTMENTS
+# GET ALL THE POLICE DEPARTMENTS (api/pds/)
 @pd_routes.route('/')
 @login_required
 def pds():
