@@ -1,12 +1,14 @@
 .comment-container-outer{
     /* border: 3px solid red; */
-}
+} 
 
 .comment-container-inner{
+    height: 100vh;
     /* border: 3px solid blue; */
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .comment-title{
