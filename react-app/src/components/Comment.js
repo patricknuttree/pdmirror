@@ -27,7 +27,6 @@ const Comment = ({ reflectionId }) => {
                     {reflectionComments?.map((comment, index) => (
                         <SingleComment key={index} comment={comment} reflectionId={reflectionId} />
                         ))}
-
                 </div>
             </div>
         </div>
