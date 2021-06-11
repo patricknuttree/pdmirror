@@ -1,5 +1,5 @@
 # Welcome to PDMirror!
-![Logo](https://github.com/patricknuttree/pdmirror/blob/main/PDMirror.png)
+<img src=PDMirror.png>
 
 ### PDMirror is a yelp inspired app that is designed to help communities and police departments have real and meaningful communication through a medium that removes some of the power dynamics that create limitations in their communications. The name and the purpose of the app all come from the same sociological theory of the sociological mirror. A person cannot determine the normalcy or deviancy of their actions through their own perspective alone. They must use the world as their mirror to determine where their action lands and from there grow.
 
@@ -107,3 +107,5 @@ This is the get route for the comments for an individual reflection.
 * Oliva Bynes for being a excellent project supervisor.
 * Brad Simpson for being going well above the call of duty as a cohort instructor.
 * Redbull for providing me with much needed alertness when working late into the night trying to meet stretch deadlines I set for myself. 
+
+<video autoPlay muted loop src=react-app/src/pdmirror.mp4>
