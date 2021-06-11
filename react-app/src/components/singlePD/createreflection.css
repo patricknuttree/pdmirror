@@ -15,7 +15,7 @@
     align-items: center;
     background-color: rgba(247, 243, 206, .25);
     border-radius: 25px;
-
+    padding: 10px 0px 10px 0px;
 }
 
 .creflect-title{
@@ -25,15 +25,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-left: 10px;
     /* width: 30%; */
 }
 
 .creflect-form{
     /* border: 3px solid hotpink; */
     height: 100%;
-    /* width: 70%; */
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -42,11 +44,12 @@
     /* border: 3px solid orange; */
     /* background-color: rgba(247, 243, 206, .5); */
     border-radius: 25px;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .creflect-fields-position{
     margin: 10px;
+    /* width: 70%; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -64,7 +67,9 @@
 
 #post-input{
     height: 64px;
-    width: 1000px;
+    /* min-width: 70%; */
+    width: 90%;
+    margin: auto;
     background-color: rgba(17, 119, 187, .75);
     color: #F7F3CE;
     font-size: 18px;
@@ -98,10 +103,15 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 70px;
 }
 
 #creflect-button-style:hover{
     transition: ease-in-out;
     transition-duration: 250ms;
     background-color: #1177BB;
+}
+
+#creflect-input-and-label{
+    width: 66%;
 }
