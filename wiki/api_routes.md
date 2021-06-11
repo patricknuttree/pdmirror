@@ -1,16 +1,19 @@
 ## Database Schema and API Routes
-![Database-Schema](wiki_images/schema1.png)
+
+![Database Schema](https://github.com/patricknuttree/pdmirror/blob/main/wiki/wiki_images/schema1.png)
 
 
 * Police Department:
-    - GET /api/department/:id -> Allows users to view a department and the reviews on it.
+    - GET /api/pds/ -> Allows users to view a department and the reflections on it.
 
-* Posts
-    - POST /api/department/:id/post -> Allows a user to create a post on a department.
+* Reflections
+    - POST /api/pds/:id/reflections -> Allows a user to create a post on a police department.
     - PUT /api/department/:id/post/:id -> Allows a user to update their post.
-    - GET /api/post/:id -> This will all a user to view the post and any comments on it.
+    - GET /api/pds/:id/reflections -> This will allow all users to view reflections on a police department.
 
 * Comments
-    - POST /api/posts/:id/comment -> Allows users to add a comment to a post. 
-    - PUT /api/posts/:id/comment/:id -> Allows users to update their comment on a post.
-    - DELETE /api/posts/:id/comments/:id -> Allows users to delete their comment on a post. 
+
+    - GET /api/comments/reflection/:id/comments -> Allows a user to view all comments on a reflection.
+    - POST /api/comments/reflection/:id/comments -> Allows users to add a comment to a reflection. 
+    - PUT /api/comments/reflection/:id/comments-> Allows users to update their comment or comments on a post.
+    - DELETE /api/comments/reflection/<int:id>/comments/<int:comment_id -> Allows users to delete their comment or comments on a post. 

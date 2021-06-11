@@ -1,12 +1,14 @@
+* Signup Page
+    - GET /sign-up
+
+* Login Page
+    - GET /login
+
 * Splash/Home Page
     - GET /
 
 * Department Page
-    - GET /department/:id
+    - GET /pd/:pdId
 
-* Post Page
-    - GET /Department/:id/Post/:id
-
-* User Page
-    - GET /User/:id
-
+* Reflection Page
+    - GET /Reflection/:reflectionId
