@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { displayComments } from "../store/comment";
 import { updateComment } from "../store/comment";
+import "./styles/editcomments.css"
 
 
 function EditCommentForm({ comment_id, setEditable, editable }) {
@@ -34,17 +35,17 @@ function EditCommentForm({ comment_id, setEditable, editable }) {
     }
 
     return (
-        <form onSubmit={onCommentSubmit}>
-            <div>
-                <label>Comment</label>
-                <textarea
-                    name="comment"
-                    onChange={updateCommentValue}
-                    value={comment}
-                />
-            </div>
-            <button type="submit">Edit Comment</button>
-        </form>
+        <div className="ecomment-container">
+            <form  className="ecomment-form" onSubmit={onCommentSubmit}>
+                    <textarea
+                        id="ecomment-input"
+                        name="comment"
+                        onChange={updateCommentValue}
+                        value={comment}
+                        />
+                <button id="ecomment-button" type="submit">Submit Edit</button>
+            </form>
+        </div>
     )
 }
 

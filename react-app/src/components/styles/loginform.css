@@ -15,7 +15,7 @@
 
 .login-form-container-inner{
     border: 1px solid rgba(17, 119, 187, .5);
-    box-shadow: 0 0 5px 1px #1177bb;
+    box-shadow: 0 0 5px 1px rgba(17, 119, 187, .2);
     background-color: rgba(247, 243, 206, .35);
     border-radius: 35px;
     width: 30%;

@@ -1,0 +1,37 @@
+.ecomment-container{
+    /* border: 3px solid red; */
+    width: 100%;
+}
+
+.ecomment-form{
+    /* border: 3px solid blue; */
+    display: flex;
+    flex-direction: column;
+    margin-right: 3px;
+}
+
+#ecomment-input{
+    width: 100%;
+    background-color: rgba(17, 119, 187, .75);
+    color: #F7F3CE;
+    margin:4px 2px 4px 2px;
+    padding: 2px 4px 2px 4px;
+    border-radius: 15px;
+}
+
+#ecomment-input:focus{
+    background-color: #1177BB;
+}
+
+#ecomment-button{
+    width: 100%;
+    height: 50%;
+    padding: 2px;
+}
+
+#ecomment-button:hover{
+    transition: ease-in-out;
+    transition-duration: 250ms;
+    background-color: #1177BB;
+    
+}

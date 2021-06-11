@@ -1,0 +1,120 @@
+.ccomment-container-outer{
+    /* border: 3px solid red; */
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin: 40px 0px 20px 0px;
+
+}
+
+.ccomment-container-inner{
+    /* border: 3px solid orange; */
+    /* border: 1px solid rgba(17, 119, 187, .2); */
+    box-shadow: 0px 0px 20px 1px rgba(220, 65, 122, .2);
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(247, 243, 206, .25);
+    border-radius: 25px;
+    padding: 20px 0px 20px 0px;
+}
+
+.ccomment-title{
+    /* border: 3px solid yellow; */
+    font-size: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    /* width: 30%; */
+}
+
+.ccomment-form{
+    /* border: 3px solid hotpink; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ccomment-field-style{
+    /* background-color: rgba(247, 243, 206, .5); */
+    border-radius: 25px;
+    /* padding: 10px; */
+    width: 90%;
+    /* border: 3px solid orange; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ccomment-fields-position{
+    margin: 10px;
+    /* width: 70%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.ccomment-labels{
+    margin-right: 10px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#comment-input{
+    height: 64px;
+    /* min-width: 70%; */
+    width: 90%;
+    margin: auto;
+    background-color: rgba(17, 119, 187, .75);
+    color: #F7F3CE;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+#rating-input{
+    height: 64px;
+    /* width: 64px; */
+    font-size: 32px;
+    background-color: rgba(17, 119, 187, .75);
+    color: #F7F3CE;
+    border-radius: 10px;
+
+}
+
+#comment-input:focus{
+    transition: ease-in-out;
+    transition-duration: 250ms;
+    background-color: rgba(17, 119, 187);
+}
+
+#ccomment-button-style{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+}
+
+#ccomment-button-style:hover{
+    transition: ease-in-out;
+    transition-duration: 250ms;
+    background-color: #1177BB;
+}
+
+#ccomment-input-and-label{
+    width: 66%;
+}
