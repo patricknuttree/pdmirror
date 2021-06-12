@@ -8,6 +8,7 @@ nav{
     width: 100%;
     top: 0;
     margin-bottom: 20px;
+    backdrop-filter: blur(7px);
 }
 
 .auth-nav-bar-container{

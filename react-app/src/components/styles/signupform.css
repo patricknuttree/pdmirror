@@ -27,6 +27,7 @@
     border: 1px solid rgba(17, 119, 187, .5);
     box-shadow: 0 0 5px 1px rgba(17, 119, 187, .2);
     background-color: rgba(247, 243, 206, .35);
+    backdrop-filter: blur(15px);
     border-radius: 35px;
     height: 80%;
     width: 50%;
@@ -78,6 +79,11 @@
 
 .signup-form-inputs-containers{
     /* border: 3px solid green; */
+}
+
+::placeholder{
+    color: #F8F8F8;
+    /* font-weight: lighter; */
 }
 
 /* WAITING TO PICK COLOR SCHEME */

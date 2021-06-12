@@ -17,13 +17,14 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
+    
 }
 
 .login-form-container-inner{
+    backdrop-filter: blur(7px);
     border: 1px solid rgba(17, 119, 187, .5);
     box-shadow: 0 0 5px 1px rgba(17, 119, 187, .2);
-    background-color: rgba(247, 243, 206, .35);
+    background-color: rgba(247, 243, 206, .5);
     border-radius: 35px;
     width: 30%;
     height: 50%;
@@ -87,12 +88,18 @@ body{
 
 /* WAITING TO PICK COLOR SCHEME */
 .input-field{
-    background-color: rgba(17, 119, 187, .25);
+    background-color: rgba(17, 119, 187, .5);
     border: none;
     max-width: 200px;
+    padding: 3px;
     font-weight: bold;
     border-radius: 10px;
     padding-left: 5px ;
-    
 }
 
+.input-field:focus{
+    backdrop-filter: blur(20px);
+    background-color: #1177BB;
+    color: #F7F3CE;
+    border: none;
+}

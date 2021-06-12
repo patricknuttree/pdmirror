@@ -21,7 +21,7 @@ function Search(){
         <div className="search-container">
             <div className="search-container-outer">
                 <div className="search-input-container-inner">
-                    <input value={search} type="text" placeholder="Police Department Name" onChange={(e) => setSearch(e.target.value)} className="search-input"/>
+                    <input value={search} type="text" placeholder="Search Police Department Name" onChange={(e) => setSearch(e.target.value)} className="search-input"/>
                 </div>
                 {filteredPDs.length < 5 && filteredPDs.length > 0 && <div className="search-output-container">
                     {search.length >= 1 && filteredPDs.map(pd => (

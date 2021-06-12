@@ -27,7 +27,11 @@ input{
     height: 40px;
     font-size: 30px;
     /* border-radius: 25px; */
-    /* background-color: #F7F3CE; */
+    background-color: rgba(247, 243, 206, .5);
+    color: #1177BB;
+}
+
+.search-input::placeholder{
     color: #1177BB;
 }
 

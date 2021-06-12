@@ -52,7 +52,7 @@ nav{
 
 .unauth-button{
     /* border: 3px solid pink; */
-    background-color: rgba(17, 119, 187, .75);
+    background-color: rgba(17, 119, 187, .6);
     color: #F7F3CE;
     height: 40px;
     width: 80px;
@@ -63,17 +63,31 @@ nav{
     border-radius: 25px;
 }
 
+.unauth-button:hover{
+    transition: ease-in-out;
+    transition-duration: 250ms;
+    background-color: rgba(17, 119, 187, .95);
+    
+}
+
 button{
     border: none;
     height: 40px;
-    width: 80px;
+    width: 85px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    background-color: rgba(17, 119, 187, .75);
+    background-color: rgba(17, 119, 187, .5);
     color: #F7F3CE;
-    
+}
+
+button:hover{
+    transition: ease-in-out;
+    transition-duration: 250ms;
+    background-color: rgba(17, 119, 187, .75);
+    font-weight: bold;
+
 }
 
