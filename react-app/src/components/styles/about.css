@@ -1,0 +1,125 @@
+.about-container-outer{
+    height: 100vh;
+}
+
+.about-container-inner{
+    /* border: 3px solid red; */
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+/* CSS FOR DEV CONTAINER */
+.about-dev-container{
+    /* border: 3px solid blue; */
+    width: 30%;
+    min-height: 100%;
+    backdrop-filter: blur(15px);
+    background-color: rgba(247, 243, 206, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* color: rgba(247, 243, 206, .5);
+    font-size: 48px; */
+    
+}
+
+.about-dev-title{
+    font-weight: bold;
+    font-size: 24px;
+    margin: 10px 0px 10px 0px;
+}
+
+.about-dev-name{
+    font-weight: bold;
+    font-size: 24px;
+    margin: 10px 0px 10px 0px;
+}
+
+.about-dev-photo{
+    height: 100%;
+}
+
+.about-dev-link-container{
+    /* border: 3px solid yellow; */
+    width: 70%;
+}
+
+.about-dev-professional-link-container{
+    /* border: 3px solid pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-dev-other-proj-container{
+    /* border: 3px solid orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-dev-link-title{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.about-dev-link{
+    text-decoration: none;
+    background-color: rgba(17, 119, 187, .75);
+    font-size: 18px;
+    border-radius: 25px;
+    color: rgba(247, 243, 206, .75);
+    padding: 5px;
+}
+
+.about-dev-link:hover{
+    transition: ease-in-out;
+    transition-duration: 250ms;
+    font-weight: bold;
+    background-color: rgba(247, 243, 206, .75);
+    color: rgba(17, 119, 187, .75);
+    border-radius: 25px;
+}
+
+.about-dev-reason{
+    background-color: rgba(17, 119, 187, .75);
+    color: #F7F3CE;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* EVERYTHING BELOW THIS LINE HANDLES ABOUT PDMIRROR */
+.about-pdmirror-container{
+    /* border: 3px solid green; */
+    backdrop-filter: blur(15px);
+    background-color: rgba(17, 119, 187, .5);
+    width: 70%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about-title{
+    color: rgba(247, 243, 206, .65);
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.about-info-box{
+    /* border: 3px solid blue; */
+    background-color: rgba(247, 243, 206, .75);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+.about-info-box-title{
+    font-weight: bold;
+}

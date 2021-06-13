@@ -20,9 +20,14 @@ const AuthNavBar = () => {
         <div className="auth-nav-site-title-container">PDMIRROR</div>
         <div className="auth-nav-link-container">
               <NavLink to="/" exact={true} activeClassName="active" className="auth-navlink">
-            <div className="auth-button">
-                Home
-            </div>
+                <div className="auth-button">
+                    Home
+                </div>
+              </NavLink>
+              <NavLink to="/about" exact={true} activeClassName="active" className="auth-navlink">
+                <div className="auth-button">
+                    About
+                </div>
               </NavLink>
             <div>
               <LogoutButton />
