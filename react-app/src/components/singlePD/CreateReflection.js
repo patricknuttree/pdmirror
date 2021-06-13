@@ -43,6 +43,7 @@ function CreateReflection() {
                         <div id="creflect-input-and-label" className="creflect-fields-position" className="creflect-field-style">
                             <label className="creflect-labels">Reflection:</label>
                             <textarea id="post-input"
+                                placeholder="Write your reflection here..."
                                 name="post"
                                 onChange={updatePost}
                                 value={post}

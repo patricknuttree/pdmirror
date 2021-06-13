@@ -6,6 +6,7 @@
 }
 
 .creflect-container-inner{
+    backdrop-filter: blur(15px);
     border: 1px solid rgba(17, 119, 187, .2);
     box-shadow: 0px 0px 20px 1px rgba(220, 65, 122, .2);
     width: 80%;
@@ -13,7 +14,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgba(247, 243, 206, .25);
+    background-color: rgba(247, 243, 206, .35);
     border-radius: 25px;
     padding: 10px 0px 10px 0px;
 }

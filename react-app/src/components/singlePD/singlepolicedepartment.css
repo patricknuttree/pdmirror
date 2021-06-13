@@ -6,6 +6,23 @@
     /* border: 3px solid blue; */
 }
 
+.spd-pd-title-container-outer{
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.spd-pd-title-container{
+    /* border: 3px solid blue; */
+    width: 30%;
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    color: rgba(247, 243, 206, .5);
+    padding-bottom: 10px;
+}
+
 .spd-pd-name-container{
     /* border: 3px solid green; */
     display: flex;

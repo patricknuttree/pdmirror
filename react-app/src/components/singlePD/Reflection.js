@@ -32,8 +32,10 @@ const Reflection = ({ pdId }) => {
 
     return (
         <div className="reflect-container-outer">
-            <div className="reflect-rating-container">
-                <h1 className="reflect-rating">Department Reflection Rating: {ratingCalculator()}</h1>
+            <div className="reflect-rating-container-outer">
+                <div className="reflect-rating-container">
+                    <h1 className="reflect-rating">Department Reflection Rating: {ratingCalculator()}</h1>
+                </div>
             </div>
             <div className="reflect-create-container">
                 <CreateReflection />
