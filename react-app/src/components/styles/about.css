@@ -40,6 +40,8 @@
 
 .about-dev-photo{
     height: 100%;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 5px rgba(17, 119, 187, .5);
 }
 
 .about-dev-link-container{

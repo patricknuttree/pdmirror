@@ -35,6 +35,19 @@ input{
     color: #1177BB;
 }
 
+.search-output-container{
+    /* border: 3px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .nothing-found{
+    /* border: 3px solid red; */
+    backdrop-filter: blur(20px);
+    padding: 9px;
+    border-radius: 25px;
+    width: 60%;
     color: #DC417A;
+    font-weight: bold;
 }
