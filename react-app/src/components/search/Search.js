@@ -30,6 +30,7 @@ function Search(){
                     </div>}
                 {filteredPDs.length === 0 && <div className="search-output-container">
                     <p className="nothing-found">No department found...</p>
+                    <p className="nothing-found">PDMirror currently only has police departments around Cleveland's Westside. Try searching Avon if looking to just Demo PDMirror.</p>
                     </div>}
             </div>
         </div>
