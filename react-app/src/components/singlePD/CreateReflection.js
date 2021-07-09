@@ -51,7 +51,7 @@ function CreateReflection() {
                         </div>
                         <div className="creflect-fields-position" className="creflect-field-style">
                             <label className="creflect-labels">Rating:</label>
-                            <input id="rating-input"
+                            <input id="crrating-input"
                                 type="number"
                                 min="1"
                                 max="5"
