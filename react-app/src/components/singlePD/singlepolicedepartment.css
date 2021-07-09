@@ -19,9 +19,9 @@
 .spd-pd-title-container{
     /* border: 3px solid blue; */
     width: 30%;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(25px);
     border-radius: 25px;
-    color: rgba(247, 243, 206, .5);
+    color: rgba(247, 243, 206, .75);
     padding-bottom: 10px;
 }
 

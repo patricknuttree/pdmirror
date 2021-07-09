@@ -40,7 +40,9 @@ const Reflection = ({ pdId }) => {
             <div className="reflect-create-container">
                 <CreateReflection />
             </div>
-            <h3>Reflections:</h3>
+            <div className="reflection-title-container">
+                <h3 id="reflection-title">Reflections:</h3>
+            </div>
             <div className="reflections-container">
                 {reflections?.map(reflect => (
                     <div key={reflect.id} className="reflection-containers">
