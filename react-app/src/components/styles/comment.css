@@ -2,6 +2,31 @@
     /* border: 3px solid red; */
 } 
 
+.comment-reflection-container{
+    /* border: 3px solid red; */
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    backdrop-filter: blur(50px);
+    border-radius: 15px;
+}
+
+.comment-reflection-title{
+    font-size: 32px;
+    font-weight: bold;
+    color: rgba(247, 243, 206, .75);
+    margin-top: 20px;
+}
+
+.comment-reflection{
+    color: rgba(247, 243, 206, .75);
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
 .comment-container-inner{
     height: 100vh;
     /* border: 3px solid blue; */
@@ -19,5 +44,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    color: rgba(247, 243, 206, .75);
 }
 
