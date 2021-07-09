@@ -71,20 +71,26 @@
     /* min-width: 70%; */
     width: 90%;
     margin: auto;
+    padding: 5px;
     background-color: rgba(17, 119, 187, .75);
     color: #F7F3CE;
     font-size: 18px;
     border-radius: 10px;
 }
 
-#rating-input{
+#crrating-input{
     height: 64px;
     /* width: 64px; */
     font-size: 32px;
+    padding-left: 25px;
     background-color: rgba(17, 119, 187, .75);
     color: #F7F3CE;
     border-radius: 10px;
+}
 
+#crrating-input::-webkit-inner-spin-button{
+    opacity: 1;
+    cursor: pointer;
 }
 
 #post-input:focus{

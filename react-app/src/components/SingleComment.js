@@ -33,7 +33,7 @@ function SingleComment({ comment, reflectionId }){
                 <div className="scomment-comment">{comment?.comment}</div>
                 <div className="scomment-buttons-container">
                     {user.id === comment?.user_id && <button className="scomment-button" id={comment?.id} onClick={editButton}>Edit</button>}
-                    {user.id === comment?.user_id && <button id="scomment-delete-button" className="scomment-button" onClick={deleteButton}>click x2 to Delete</button>}
+                    {user.id === comment?.user_id && <button id="scomment-delete-button" className="scomment-button" onClick={deleteButton}>Delete</button>}
                     {editable && <EditCommentForm comment_id={comment?.id} editable={editable} setEditable={setEditable} />}
                     </div>
             </div>

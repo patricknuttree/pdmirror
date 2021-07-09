@@ -11,27 +11,33 @@
 }
 
 .reflect-rating-container{
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(50px);
     /* background-color: rgba(247, 243, 206, .35); */
     border-radius: 25px;
-    color: rgba(247, 243, 206, .5);
+    color: rgba(247, 243, 206, .75);
     /* border: 3px solid orange; */
     width: 30%;
     /* justify-self: center; */
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 
 }
 
-.reflect-rating{
-    
+.reflection-title-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    backdrop-filter: blur(50px);
+    margin-top: 20px;
 }
 
-.reflect-create-container{
-    /* border: 3px solid blue; */
+#reflection-title{
+    font-size: 24px;
+    color: rgba(0, 0, 0, .75);
 }
-
 
 
 .reflections-container{
