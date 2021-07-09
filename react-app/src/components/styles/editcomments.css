@@ -7,11 +7,15 @@
     /* border: 3px solid blue; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-right: 3px;
+    margin-bottom: 10px;
 }
 
 #ecomment-input{
-    width: 100%;
+    width: 90%;
+    height: 50px;
     background-color: rgba(17, 119, 187, .75);
     color: #F7F3CE;
     margin:4px 2px 4px 2px;
@@ -24,9 +28,9 @@
 }
 
 #ecomment-button{
-    width: 100%;
+    width: 50%;
     height: 50%;
-    padding: 2px;
+    padding: 5px;
 }
 
 #ecomment-button:hover{

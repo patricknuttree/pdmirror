@@ -48,6 +48,10 @@ nav{
     text-decoration: none;
 }
 
+button{
+    cursor: pointer;
+}
+
 .auth-button{
     /* border: 3px solid pink; */
     background-color: rgba(17, 119, 187, .5);
