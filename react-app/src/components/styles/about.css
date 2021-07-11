@@ -1,5 +1,6 @@
 .about-container-outer{
-    height: 100vh;
+    height: fit-content;
+    margin-bottom: 50px;
 }
 
 .about-container-inner{

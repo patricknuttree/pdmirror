@@ -22,10 +22,11 @@
 }
 
 .main-search-container{
+    /* border: 3px solid red; */
     backdrop-filter: blur(15px);
     border: 1px solid rgba(220, 65, 122, .10);
     box-shadow: 0px 0px 5px 5px rgba(220, 65, 122, .10);
-    height: 80%;
+    height: fit-content;
     width: 80%;
     background-color: rgba(247, 243, 206, .5);
     border-radius: 25px;
